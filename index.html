@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Profil Link</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    color: white;
+  }
+
+  .background {
+    background-image: url('foto-bersama1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0; 
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin: 0 0 15px;
+    letter-spacing: 2px;
+  }
+
+  p.subtitle {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 0 0 25px;
+    color: #ddd;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: white;
+    background-image: url('logo-aquament.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .link-button {
+    background-color: #ffffff33;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .link-button:hover {
+    background-color: #ffffff88;
+    transform: translateY(-3px);
+  }
+  .link-button svg {
+    fill: white;
+    width: 22px;
+    height: 22px;
+  }
+
+  .member-albums {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .member-albums h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #56ccf2;
+    padding-bottom: 6px;
+  }
+  .member-link {
+    background-color: #375a7f;
+    border-radius: 12px;
+    padding: 12px 18px;
+    color: #a8d0ff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.25s ease;
+  }
+  .member-link:hover {
+    background-color: #56ccf2;
+    color: white;
+  }
+  .member-link svg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="background" role="main">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="logo"></div>
+      <h1>AQUAMENT PRO</h1>
+      <p class="subtitle">SUGENG RAWUH! </p>
+
+      <nav class="links" aria-label="Social media and album shortcuts">
+        <a href="https://www.instagram.com/aquament_pro" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="Instagram">
+          Our Instagram
+        </a>
+        <a href="album.html" class="link-button" aria-label="Album Photo Bersama">
+          Our Gallery
+        </a>
+      </nav>
+
+      <section class="member-albums" aria-label="Album per anggota">
+        <h2>Person of Us</h2>
+        <a href="album-aab.html" class="member-link" aria-label="Album Anggota Aab">
+          Aab
+        </a>
+        <a href="album-aal.html" class="member-link" aria-label="Album Anggota Aal">
+          Aal
+        </a>
+        <a href="album-adinata.html" class="member-link" aria-label="Album Anggota Adinata">
+          Adinata
+        </a>
+        <a href="album-fachrur.html" class="member-link" aria-label="Album Anggota Fachrur">
+          Fachrur
+        </a>
+        <a href="album-frido.html" class="member-link" aria-label="Album Anggota Frido">
+          Frido
+        </a>
+        <a href="album-naufal.html" class="member-link" aria-label="Album Anggota Naufal">
+          Naufal
+        </a>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
